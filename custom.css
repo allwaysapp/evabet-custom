@@ -19,3 +19,10 @@
     max-width: 1440px !important;
     margin: auto !important;
 }
+
+
+.l2--container {
+    margin: 0 auto;
+    max-width: 1440px !important;
+    padding: 0 0 !important;
+}
