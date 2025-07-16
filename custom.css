@@ -36,3 +36,12 @@ footer .about--company, footer .copyright {
     width: 100%;
     display: none !important;
 }
+
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
+    background: #ffde02;
+    color: #000;
+    border-radius: 10px;
+    height: 36px;
+    line-height: 40px;
+    padding: 0 16px !important;
+}
