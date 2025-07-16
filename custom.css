@@ -1,4 +1,13 @@
-
+.multi-view_content__background {
+    filter: blur(0px) !important;
+    opacity: 0.4 !important;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
 
 .multi-view_content.one-grid .multi-view-item_wrapper.grid-centered {
     aspect-ratio: 16 / 9;
