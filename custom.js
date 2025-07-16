@@ -1,1 +1,1 @@
-test
+console.log("Custom kod çalışıyor.");
