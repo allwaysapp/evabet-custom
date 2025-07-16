@@ -31,3 +31,8 @@
     margin: 0 -4px;
     max-width: 1440px !important;
 }
+
+footer .about--company, footer .copyright {
+    width: 100%;
+    display: none !important;
+}
