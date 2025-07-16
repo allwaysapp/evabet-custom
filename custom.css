@@ -92,3 +92,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
 a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold:hover::before {
     left: 100%;
 }
+
+.tm_slider_control>button {
+    border-radius: 10px !important;
+}
