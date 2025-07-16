@@ -26,3 +26,8 @@
     max-width: 1440px !important;
     padding: 0 0 !important;
 }
+
+.banners--long-list .slick-list { 
+    margin: 0 -4px;
+    max-width: 1440px !important;
+}
