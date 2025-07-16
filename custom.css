@@ -108,13 +108,3 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
         text-transform: uppercase !important;
     }
 }
-
-.tb--menu-item_text i {
-    margin-right: 8px;
-    color: inherit;
-}
-
-.tb--ph-8 {
-    background: #ffde02;
-    color: #000;
-}
