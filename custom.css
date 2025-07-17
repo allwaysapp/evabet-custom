@@ -169,6 +169,10 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
    RESPONSIVE - MOBILE (768px-)
    ================================ */
 @media only screen and (max-width: 768px) {
+
+    .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
+        color: #2d2d2d !important;
+    }
     
     
     /* Mobile menu layout */
@@ -176,10 +180,6 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     .header-mobile-menu .menu-block_static-list {
         gap: 0px !important;
         padding: 0;
-    }
-
-.menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
-        color: #2d2d2d !important;
     }
     
     /* Mobile menu buttons */
