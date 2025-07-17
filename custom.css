@@ -115,4 +115,8 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
         color: #2d2d2d !important;
     }
+.header-mobile-menu .menu-block_grid, .header-mobile-menu .menu-block_static-list {
+    gap: 0px !important;
+    padding: 0;
+}
 }
