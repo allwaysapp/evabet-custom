@@ -139,4 +139,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     min-height: 54px;
     padding: 0px !important;
 }
+.menu-block .menu--block-item .header-icon {
+        display: none !important;
+    }
 }
