@@ -132,4 +132,11 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     position: relative;
     overflow: hidden;
 }
+.menu-block_static-list .main--menu-item-cont {
+    border-radius: 12px;
+    color: var(--text-color-3);
+    margin-bottom: 12px;
+    min-height: 54px;
+    padding: 0px !important;
+}
 }
