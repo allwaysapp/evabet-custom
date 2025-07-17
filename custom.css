@@ -1,5 +1,22 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+
+body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+
+* {
+    box-sizing: border-box !important;
+}
+
+
+.container, .wrapper, .main {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 .multi-view_content__background {
     filter: blur(0px) !important;
     opacity: 0.4 !important;
