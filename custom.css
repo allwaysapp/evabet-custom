@@ -255,18 +255,16 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     position: relative;
     overflow: hidden;
     padding: 0 12px;
+    border-radius:10px;
     
 }
 
 .secondarymenu-block--mutation-menu a.submenu-txt:hover {
-    transform: translateY(-2px);
+    background:#191919 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    scale: 1.02;
 }
 
 .secondarymenu-block--mutation-menu a.submenu-txt:active {
-    transform: translateY(0);
-    scale: 0.98;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
