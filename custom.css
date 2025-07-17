@@ -174,10 +174,11 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
         padding: 0 16px !important;
         margin-bottom: 16px;
     }
-}
-
 .l2--container {
     margin: 0 auto;
     max-width: 1440px !important;
     padding: 0 16px !important;
 }
+
+}
+
