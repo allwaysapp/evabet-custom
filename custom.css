@@ -119,4 +119,17 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     gap: 0px !important;
     padding: 0;
 }
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
+    background: #ffde02;
+    color: #000;
+    border-radius: 10px !important;
+    height: auto !important;
+    line-height: 40px;
+    padding: 0 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
 }
