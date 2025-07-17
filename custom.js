@@ -1,3 +1,10 @@
+if (!document.querySelector('link[href*="fontawesome"]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+}
+
 (function() {
     const menuLinks = document.querySelectorAll('a.menu--block-item');
     
