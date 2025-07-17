@@ -128,6 +128,16 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     }
 }
 
+@media only screen and (min-width: 769px) {
+    .tb--promotions_cont {
+        display: grid
+;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
         color: #2d2d2d !important;
