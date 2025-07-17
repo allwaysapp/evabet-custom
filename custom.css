@@ -257,10 +257,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     gap: 0px !important;
     padding: 0;
 }
-    .menu-block .menu--block-item .header-icon {
-        margin-right: 10px;
-        display: none !important;
-    }
+   
 }
 
 /* Secondary Menu Hover Effect */
