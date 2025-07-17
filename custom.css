@@ -133,21 +133,6 @@ footer .about--company, footer .copyright {
     .logoBlock_img {
         max-height: 250px !important;
     }
-
-a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
-    background: none !important;
-    color: #ffffff;
-    border-radius: 10px !important;
-    border: solid 1px #1d1d25 !important;
-    height: 36px;
-    line-height: 40px;
-    padding: 0 16px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
 }
 
 /* ================================
