@@ -133,6 +133,20 @@ footer .about--company, footer .copyright {
     .logoBlock_img {
         max-height: 250px !important;
     }
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
+    background: none !important;
+    color: #ffffff;
+    border-radius: 10px !important;
+    border: solid 1px #1d1d25 !important;
+    height: 36px;
+    line-height: 40px;
+    padding: 0 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
 }
 
 /* ================================
@@ -155,10 +169,7 @@ footer .about--company, footer .copyright {
    RESPONSIVE - MOBILE (768px-)
    ================================ */
 @media only screen and (max-width: 768px) {
-    /* Menu text color */
-    .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
-        color: #2d2d2d !important;
-    }
+    
     
     /* Mobile menu layout */
     .header-mobile-menu .menu-block_grid, 
