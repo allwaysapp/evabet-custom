@@ -110,3 +110,9 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
         text-transform: uppercase !important;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
+        color: #2d2d2d !important;
+    }
+}
