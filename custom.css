@@ -156,6 +156,12 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     position: relative;
     overflow: hidden;
 }
+
+    .tb--secondary-menu-container.secondary--menu-left {
+        margin-left: none !important;
+        margin-right: none !important;
+        margin: auto !important;
+    }
 }
 
 /* ================================
