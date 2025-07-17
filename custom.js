@@ -1,16 +1,10 @@
-if (!document.querySelector('link[href*="fontawesome"]')) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-    document.head.appendChild(link);
-}
 
-(function() {
+function addMenuIcons() {
     const menuLinks = document.querySelectorAll('a.menu--block-item');
     
     menuLinks.forEach(link => {
         const span = link.querySelector('span.tb--menu-item_text');
-        if (span) {
+        if (span && !span.querySelector('i')) { // Zaten icon varsa ekleme
             const text = span.textContent.trim();
             let icon = '';
             
@@ -34,4 +28,21 @@ if (!document.querySelector('link[href*="fontawesome"]')) {
             }
         }
     });
-})();
+}
+
+
+addMenuIcons();
+
+
+const observer = new MutationObserver(() => {
+    addMenuIcons();
+});
+
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+
+window.addEventListener('load', addMenuIcons);
