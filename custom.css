@@ -226,3 +226,9 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
         padding: 0 16px !important;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
+        color: #2d2d2d !important;
+    }
+}
