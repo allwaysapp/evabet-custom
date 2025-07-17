@@ -24,6 +24,7 @@ body {
 .l2--container {
     margin: 0 auto;
     max-width: 1440px !important;
+   overflow-x: auto;
     padding: 0 0 !important;
 }
 
@@ -237,6 +238,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     /* Mobile container padding */
     .l2--container {
         margin: 0 auto;
+       overflow-x: auto;
         max-width: 1440px !important;
         padding: 0 16px !important;
     }
