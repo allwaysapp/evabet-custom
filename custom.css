@@ -1,1 +1,212 @@
+/* ================================
+   EXTERNAL IMPORTS
+   ================================ */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+/* ================================
+   LAYOUT & CONTAINERS
+   ================================ */
+.l2--top {
+    max-width: 1440px !important;
+    margin: auto !important;
+}
+
+.l2--container {
+    margin: 0 auto;
+    max-width: 1440px !important;
+    padding: 0 0 !important;
+}
+
+.banners--long-list .slick-list { 
+    margin: 0 -4px;
+    max-width: 1440px !important;
+}
+
+/* ================================
+   HEADER & LOGO
+   ================================ */
+.logoBlock_img {
+    width: 150px !important;
+    height: auto !important;
+}
+
+/* ================================
+   MENU BUTTONS
+   ================================ */
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
+    background: #ffde02;
+    color: #000;
+    border-radius: 10px !important;
+    height: 36px;
+    line-height: 40px;
+    padding: 0 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold:hover {
+    background: #f5d000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    scale: 1.02;
+}
+
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold:active {
+    transform: translateY(0);
+    scale: 0.98;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold:hover::before {
+    left: 100%;
+}
+
+/* ================================
+   VIDEO & MEDIA
+   ================================ */
+.multi-view_content__background {
+    filter: blur(0px) !important;
+    opacity: 0.4 !important;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.multi-view_content.one-grid .multi-view-item_wrapper.grid-centered {
+    aspect-ratio: 16 / 9;
+    padding-right: 0;
+    box-shadow: 0 36px 72px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ================================
+   SLIDER CONTROLS
+   ================================ */
+.tm_slider_control > button {
+    border-radius: 10px !important;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer .about--company, footer .copyright {
+    width: 100%;
+    display: none !important;
+}
+
+/* ================================
+   RESPONSIVE - DESKTOP (1366px+)
+   ================================ */
+@media only screen and (min-width: 1366px) {
+    .btn {
+        height: 36px !important;
+        line-height: 36px !important;
+        width: 100px !important;
+        border-radius: 10px !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
+        text-transform: uppercase !important;
+    }
+}
+
+/* ================================
+   RESPONSIVE - DESKTOP (1024px+)
+   ================================ */
+@media only screen and (min-width: 1024px) {
+    .logoBlock_img {
+        max-height: 250px !important;
+    }
+}
+
+/* ================================
+   RESPONSIVE - TABLET (769px+)
+   ================================ */
+@media only screen and (min-width: 769px) {
+    .tb--promotions_cont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .menu-block_holder.main--menu-center {
+        margin: 0 16px !important;
+    }
+}
+
+/* ================================
+   RESPONSIVE - MOBILE (768px-)
+   ================================ */
+@media only screen and (max-width: 768px) {
+    /* Menu text color */
+    .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
+        color: #2d2d2d !important;
+    }
+    
+    /* Mobile menu layout */
+    .header-mobile-menu .menu-block_grid, 
+    .header-mobile-menu .menu-block_static-list {
+        gap: 0px !important;
+        padding: 0;
+    }
+    
+    /* Mobile menu buttons */
+    a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
+        background: #ffde02;
+        color: #000;
+        border-radius: 10px !important;
+        height: auto !important;
+        line-height: 40px;
+        padding: 0 16px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Mobile menu containers */
+    .menu-block_static-list .main--menu-item-cont {
+        border-radius: 12px;
+        color: var(--text-color-3);
+        margin-bottom: 12px;
+        min-height: 54px;
+        padding: 0px !important;
+    }
+    
+    /* Hide mobile menu icons */
+    .menu-block .menu--block-item .header-icon {
+        display: none !important;
+    }
+    
+    /* Featured products mobile */
+    .featured-product .tb--featured-menu-grid, 
+    .featured-product .tb--featured-menu-slider {
+        gap: 8px;
+        padding: 0 16px !important;
+        margin-bottom: 16px;
+    }
+    
+    /* Mobile container padding */
+    .l2--container {
+        margin: 0 auto;
+        max-width: 1440px !important;
+        padding: 0 16px !important;
+    }
+}
