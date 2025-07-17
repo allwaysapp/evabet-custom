@@ -3,6 +3,7 @@
    ================================ */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+
 /* ================================
    LAYOUT & CONTAINERS
    ================================ */
@@ -144,10 +145,10 @@ footer .about--company, footer .copyright {
         gap: 20px;
         padding: 20px;
     }
-    
-    .menu-block_holder.main--menu-center {
+.menu-block_holder.main--menu-center {
         margin: 0 16px !important;
     }
+}
 }
 
 /* ================================
