@@ -8,10 +8,7 @@ if (!document.querySelector('link[href*="fontawesome"]')) {
 
 // Icon ekleme fonksiyonu
 function addMenuIcons() {
-    const spans = document.querySelectorAll('a.menu--block-item span.tb--menu-item_text');
-    console.log('GitHub kodundan çalışıyor, span sayısı:', spans.length);
-    
-    spans.forEach(span => {
+    document.querySelectorAll('a.menu--block-item span.tb--menu-item_text').forEach(span => {
         if (!span.querySelector('i')) {
             const text = span.textContent.trim();
             if (text === 'BONUS TALEP') span.innerHTML = '<i class="fas fa-gift"></i> ' + text;
@@ -22,10 +19,9 @@ function addMenuIcons() {
     });
 }
 
-// DOM hazır olana kadar bekle
+// DOM hazır olana kadar bekle ve icon'ları ekle
 function waitAndAdd() {
     const menuCount = document.querySelectorAll('a.menu--block-item').length;
-    console.log('GitHub kodu çalışıyor, menu sayısı:', menuCount);
     
     if (menuCount > 0) {
         addMenuIcons();
