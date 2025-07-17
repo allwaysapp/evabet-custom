@@ -159,6 +159,11 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
 .menu-block .menu--block-item .header-icon {
         display: none !important;
     }
+.featured-product .tb--featured-menu-grid, .featured-product .tb--featured-menu-slider {
+        gap: 8px;
+        padding: 0 16px !important;
+        margin-bottom: 16px;
+    }
 }
 
 .l2--container {
