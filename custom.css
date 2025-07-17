@@ -8,6 +8,7 @@
    ================================ */
 body, html {
     overflow-x: hidden !important;
+    overflow-y: auto !important; /* Sticky için Y eksenini aç */
     max-width: 100vw !important;
 }
 
@@ -161,10 +162,6 @@ footer .about--company, footer .copyright {
         gap: 20px;
         padding: 20px;
     }
-.menu-block_holder.main--menu-center {
-        margin: 0 16px !important;
-    }
-}
 }
 
 /* ================================
