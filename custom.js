@@ -1,10 +1,10 @@
-
+// Font Awesome yükle
 const fontAwesome = document.createElement('link');
 fontAwesome.rel = 'stylesheet';
 fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
 document.head.appendChild(fontAwesome);
 
-
+// Icon ekleme fonksiyonu  
 function addIcons() {
     document.querySelectorAll('a.menu--block-item span.tb--menu-item_text').forEach(span => {
         if (!span.querySelector('i')) {
@@ -17,8 +17,5 @@ function addIcons() {
     });
 }
 
-
+// Sadece hemen çalıştır
 addIcons();
-
-
-new MutationObserver(addIcons).observe(document.body, {childList: true, subtree: true});
