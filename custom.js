@@ -1,4 +1,12 @@
+// Font Awesome yükle
+if (!document.querySelector('link[href*="fontawesome"]')) {
+    const fontAwesome = document.createElement('link');
+    fontAwesome.rel = 'stylesheet';
+    fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(fontAwesome);
+}
 
+// Icon ekleme fonksiyonu
 function addMenuIcons() {
     const menuLinks = document.querySelectorAll('a.menu--block-item');
     
@@ -30,19 +38,22 @@ function addMenuIcons() {
     });
 }
 
-
+// Hemen çalıştır
 addMenuIcons();
 
-
+// DOM değişikliklerini izle
 const observer = new MutationObserver(() => {
     addMenuIcons();
 });
-
 
 observer.observe(document.body, {
     childList: true,
     subtree: true
 });
 
-
+// Sayfa yüklendiğinde de çalıştır
 window.addEventListener('load', addMenuIcons);
+
+// Font Awesome yüklendikten sonra da çalıştır
+setTimeout(addMenuIcons, 1000);
+setTimeout(addMenuIcons, 2000);
