@@ -116,6 +116,12 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     border-radius: 10px !important;
 }
 
+@media only screen and (min-width: 1024px) {
+    .logoBlock_img {
+        max-height: 250px !important;
+    }
+}
+
 @media only screen and (min-width: 1366px) {
     .btn {
         height: 36px !important;
@@ -182,3 +188,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
 
 }
 
+.logoBlock_img {
+    width: 150px !important;
+    height: auto !important;
+}
