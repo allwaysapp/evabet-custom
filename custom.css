@@ -292,3 +292,9 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
 .secondarymenu-block--mutation-menu a.submenu-txt:hover::before {
     left: 100%;
 }
+
+.tb--sidebar-menu_wrapper.tb--sidebar-open .tb--sidebar-secondary_item:before {
+    background-color: var(--background-color-4) !important;
+    background-image: var(--background-gradient-1);
+    opacity: .6;
+}
