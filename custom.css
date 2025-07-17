@@ -339,3 +339,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
 .mainmenu-block--mutation-menu a.menu--block-item:hover::before {
     left: 100%;
 }
+
+.tb--floating-menu_item__link {
+    background: var(--background-color-3) !important;
+}
