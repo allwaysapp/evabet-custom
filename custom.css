@@ -12,6 +12,10 @@ body {
   --background-color-6: #12141A;
 }
 
+body {
+padding: 0px !important;
+}
+
 
 /* ================================
    LAYOUT & CONTAINERS
