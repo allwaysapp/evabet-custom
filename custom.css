@@ -417,7 +417,7 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     .custom-section1 {
         grid-template-columns: repeat(4, 1fr);
         gap: 8px;
-        padding: 16px;
+        padding: 0 5px;
     }
     
     .custom-section1-link:hover {
