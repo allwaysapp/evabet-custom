@@ -141,8 +141,9 @@ footer .about--company, footer .copyright {
    RESPONSIVE - DESKTOP (1024px+)
    ================================ */
 @media only screen and (min-width: 1024px) {
-    .logoBlock_img {
-        max-height: 250px !important;
+   .logoBlock_img {
+        width: 110px !important;
+        height: auto !important;
     }
 a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
     background: none !important;
