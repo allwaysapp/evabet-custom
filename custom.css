@@ -190,6 +190,12 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
    ================================ */
 @media only screen and (max-width: 768px) {
 
+.logoBlock_img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
     .menu--block-item.tb--bold .tb--menu-item_text.no-mutation {
         color: #2d2d2d !important;
     }
