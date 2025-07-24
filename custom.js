@@ -94,12 +94,12 @@ function addCustomSection2() {
         { 
             name: 'Telegram', 
             url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/telegram.webp', 
-            link: 'https://t.me/evabetduyuru' 
+            link: 'https://t.me/evadestekresmi' 
         },
         { 
             name: 'WhatsApp', 
             url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/whatsapp.webp', 
-            link: 'https://www.whatsapp.com/channel/0029Vb6SHSyHwXbHFL6Nnd2n' 
+            link: 'https://wa.me/31626047998' 
         }
     ];
     
