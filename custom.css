@@ -471,3 +471,8 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 }
+
+#anj-0258d931-1563-4a3b-a522-851c1c24e41e {
+    display: flex !important;
+    justify-content: center !important;
+}
