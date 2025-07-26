@@ -618,3 +618,66 @@ footer .about--company, footer .copyright {
 .tb--floating-menu_item .category_icon-promotions {
     color: #FF6B35 !important;
 }
+
+/* ================================
+   BADGES - Anjouan Seal içindeki logoler
+   ================================ */
+#anj-0258d931-1563-4a3b-a522-851c1c24e41e {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 20px auto !important;
+    width: auto !important;
+    max-width: 500px !important;
+    padding: 0 20px !important;
+}
+
+.evabet-badge-link {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.evabet-badge-link:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.evabet-badge-item {
+    width: 100px;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.evabet-badge-link:hover .evabet-badge-item {
+    filter: brightness(1.1);
+}
+
+/* Responsive badge boyutları */
+@media (max-width: 768px) {
+    #anj-0258d931-1563-4a3b-a522-851c1c24e41e {
+        gap: 15px !important;
+        padding: 0 15px !important;
+    }
+    
+    .evabet-badge-item {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    #anj-0258d931-1563-4a3b-a522-851c1c24e41e {
+        gap: 12px !important;
+    }
+    
+    .evabet-badge-item {
+        width: 70px;
+    }
+}
