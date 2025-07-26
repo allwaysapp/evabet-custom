@@ -10,6 +10,7 @@ function isHomePage() {
 function removeCustomSections() {
     const existingSection1 = document.querySelector('.custom-section1');
     const existingSection2 = document.querySelector('.custom-section2');
+    const existingBadges = document.querySelectorAll('.evabet-badge-link');
     
     if (existingSection1) {
         existingSection1.remove();
@@ -18,6 +19,8 @@ function removeCustomSections() {
     if (existingSection2) {
         existingSection2.remove();
     }
+    
+    existingBadges.forEach(badge => badge.remove());
 }
 
 function addCustomSection1() {
@@ -122,6 +125,64 @@ function addCustomSection2() {
     section1.insertAdjacentElement('afterend', customSection2);
 }
 
+function addBadgesToSeal() {
+    if (!isHomePage()) {
+        return;
+    }
+    
+    const anjDiv = document.querySelector('#anj-0258d931-1563-4a3b-a522-851c1c24e41e');
+    
+    if (!anjDiv) {
+        return;
+    }
+    
+    if (document.querySelector('.evabet-badge-link')) {
+        return;
+    }
+    
+    // DMCA Badge (sol)
+    const dmcaBadge = {
+        name: 'DMCA Badge',
+        url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/dmca-badge.png',
+        link: 'https://www.dmca.com/'
+    };
+    
+    const dmcaLinkElement = document.createElement('a');
+    dmcaLinkElement.href = dmcaBadge.link;
+    dmcaLinkElement.className = 'evabet-badge-link';
+    dmcaLinkElement.target = '_blank';
+    dmcaLinkElement.rel = 'noopener noreferrer';
+    
+    const dmcaImgElement = document.createElement('img');
+    dmcaImgElement.src = dmcaBadge.url;
+    dmcaImgElement.alt = dmcaBadge.name;
+    dmcaImgElement.className = 'evabet-badge-item';
+    
+    dmcaLinkElement.appendChild(dmcaImgElement);
+    anjDiv.insertBefore(dmcaLinkElement, anjDiv.firstChild);
+    
+    // BeGamble Badge (sağ)
+    const begambleBadge = {
+        name: 'BeGamble Badge',
+        url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/begamble.png',
+        link: 'https://www.begambleaware.org/'
+    };
+    
+    const begambleLinkElement = document.createElement('a');
+    begambleLinkElement.href = begambleBadge.link;
+    begambleLinkElement.className = 'evabet-badge-link';
+    begambleLinkElement.target = '_blank';
+    begambleLinkElement.rel = 'noopener noreferrer';
+    
+    const begambleImgElement = document.createElement('img');
+    begambleImgElement.src = begambleBadge.url;
+    begambleImgElement.alt = begambleBadge.name;
+    begambleImgElement.className = 'evabet-badge-item';
+    
+    begambleLinkElement.appendChild(begambleImgElement);
+    anjDiv.appendChild(begambleLinkElement);
+}
+
 function addCustomSections() {
     if (!isHomePage()) {
         removeCustomSections();
@@ -130,6 +191,7 @@ function addCustomSections() {
     
     addCustomSection1();
     addCustomSection2();
+    addBadgesToSeal();
 }
 
 function handlePageChange() {
