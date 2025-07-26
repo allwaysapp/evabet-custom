@@ -145,25 +145,41 @@ footer .about--company, footer .copyright {
         width: 110px !important;
         height: auto !important;
     }
-a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
-    background: none !important;
-    color: #ffffff;
-    border-radius: 10px !important;
-    border: solid 1px #1d1d25 !important;
-    height: 36px;
-    line-height: 40px;
-    padding: 0 16px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
 
     .tb--secondary-menu-container.secondary--menu-left {
         margin-left: none !important;
         margin-right: none !important;
         margin: auto !important;
+    }
+
+    /* Meksika Dalgası Efekti - Sadece Desktop */
+    .mainmenu-block--mutation.menu-block .mainmenu-block--mutation-menu:nth-child(1) {
+        animation: waveEffect 4s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    .mainmenu-block--mutation.menu-block .mainmenu-block--mutation-menu:nth-child(2) {
+        animation: waveEffect 4s ease-in-out infinite;
+        animation-delay: 0.4s;
+    }
+
+    .mainmenu-block--mutation.menu-block .mainmenu-block--mutation-menu:nth-child(3) {
+        animation: waveEffect 4s ease-in-out infinite;
+        animation-delay: 0.8s;
+    }
+
+    .mainmenu-block--mutation.menu-block .mainmenu-block--mutation-menu:nth-child(4) {
+        animation: waveEffect 4s ease-in-out infinite;
+        animation-delay: 1.2s;
+    }
+
+    @keyframes waveEffect {
+        0%, 85%, 100% { 
+            transform: scale(1); 
+        }
+        15% { 
+            transform: scale(1.06); 
+        }
     }
 }
 
@@ -197,21 +213,6 @@ a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold
     .header-mobile-menu .menu-block_static-list {
         gap: 0px !important;
         padding: 0;
-    }
-    
-    /* Mobile menu buttons */
-    a.menu--block-item.tb--flex.tb--align-center.no-mutation.menu-block-big.tb--bold {
-        background: #ffde02;
-        color: #000;
-        border-radius: 10px !important;
-        height: auto !important;
-        line-height: 40px;
-        padding: 0 16px !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        transform: translateY(0);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
     }
     
     /* Mobile menu containers */
