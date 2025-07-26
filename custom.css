@@ -576,3 +576,45 @@ footer .about--company, footer .copyright {
         }
     }
 }
+
+/* Sosyal Medya Icon Renkleri - Sadece İconlar */
+
+/* Twitter/X */
+.tb--floating-menu_item .category_icon-twitter {
+    color: #ffffff !important;
+}
+
+/* Telegram */
+.tb--floating-menu_item .category_icon-telegram {
+    color: #0088cc !important;
+}
+
+/* YouTube */
+.tb--floating-menu_item .category_icon-youtube {
+    color: #FF0000 !important;
+}
+
+/* Instagram */
+.tb--floating-menu_item .category_icon-instagram {
+    color: #E4405F !important;
+}
+
+/* WhatsApp */
+.tb--floating-menu_item .category_icon-whatsapp {
+    color: #25D366 !important;
+}
+
+/* Bonus Talep */
+.tb--floating-menu_item .category_icon-bonus {
+    color: #FFD700 !important;
+}
+
+/* EvaTV */
+.tb--floating-menu_item .category_icon-tv_games_2 {
+    color: #9146FF !important;
+}
+
+/* Promosyonlar */
+.tb--floating-menu_item .category_icon-promotions {
+    color: #FF6B35 !important;
+}
