@@ -243,6 +243,26 @@ function addFooterHeader() {
     footerDiv.insertBefore(footerHeaderContainer, footerDiv.firstChild);
 }
 
+function fixGridLayout() {
+    const widgetContainer = document.querySelector('.tb--widget-container');
+    
+    if (!widgetContainer) {
+        return;
+    }
+    
+    const gridDiv = widgetContainer.firstElementChild;
+    
+    if (!gridDiv) {
+        return;
+    }
+    
+    gridDiv.style.display = 'flex';
+    gridDiv.style.flexDirection = 'column';
+    gridDiv.style.gap = '12px';
+    gridDiv.style.gridTemplateColumns = '';
+    gridDiv.style.gridTemplateRows = '';
+}
+
 function addCustomSections() {
     if (isHomePage()) {
         addCustomSection1();
@@ -252,6 +272,7 @@ function addCustomSections() {
     addBadgesToSeal();
     addProviderImage();
     addFooterHeader();
+    fixGridLayout();
 }
 
 function handlePageChange() {
@@ -280,6 +301,7 @@ function waitAndAddSections() {
         addBadgesToSeal();
         addProviderImage();
         addFooterHeader();
+        fixGridLayout();
     }
 }
 
