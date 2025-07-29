@@ -705,3 +705,31 @@ footer .about--company, footer .copyright {
         margin: 0 !important;
     }
 }
+
+/* Provider Image Section */
+.provider-image-section {
+    width: 100%;
+    text-align: center;
+}
+
+.provider-image-item {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer Header Section */
+.footer-header-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.footer-header-item {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
