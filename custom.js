@@ -11,6 +11,7 @@ function removeCustomSections() {
     const existingSection1 = document.querySelector('.custom-section1');
     const existingSection2 = document.querySelector('.custom-section2');
     const existingBadges = document.querySelectorAll('.evabet-badge-link');
+    const existingProvider = document.querySelector('.provider-image-section');
     
     if (existingSection1) {
         existingSection1.remove();
@@ -18,6 +19,10 @@ function removeCustomSections() {
     
     if (existingSection2) {
         existingSection2.remove();
+    }
+    
+    if (existingProvider) {
+        existingProvider.remove();
     }
     
     existingBadges.forEach(badge => badge.remove());
@@ -136,24 +141,18 @@ function addBadgesToSeal() {
         return;
     }
     
-    // Lisans logosu yüklenene kadar bekle
     const checkLicenseLoaded = () => {
         const licenseImg = anjDiv.querySelector('img');
         
-        // Eğer lisans logosu yok veya yüklenmemişse bekle
         if (!licenseImg || !licenseImg.complete) {
             setTimeout(checkLicenseLoaded, 200);
             return;
         }
         
-        // Badge'ler zaten varsa ekleme
         if (document.querySelector('.evabet-badge-link')) {
             return;
         }
         
-        console.log('✅ Lisans logosu yüklendi, badge\'ler ekleniyor...');
-        
-        // DMCA Badge (sol)
         const dmcaBadge = {
             name: 'DMCA Badge',
             url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/dmca-badge.png',
@@ -174,7 +173,6 @@ function addBadgesToSeal() {
         dmcaLinkElement.appendChild(dmcaImgElement);
         anjDiv.insertBefore(dmcaLinkElement, anjDiv.firstChild);
         
-        // BeGamble Badge (sağ)
         const begambleBadge = {
             name: 'BeGamble Badge',
             url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/begamble.png',
@@ -196,8 +194,34 @@ function addBadgesToSeal() {
         anjDiv.appendChild(begambleLinkElement);
     };
     
-    // Lisans logosu kontrolünü başlat
     checkLicenseLoaded();
+}
+
+function addProviderImage() {
+    if (!isHomePage()) {
+        return;
+    }
+    
+    const footerMenuBlock = document.querySelector('.footer-menu-block.f-row');
+    
+    if (!footerMenuBlock) {
+        return;
+    }
+    
+    if (document.querySelector('.provider-image-section')) {
+        return;
+    }
+    
+    const providerContainer = document.createElement('div');
+    providerContainer.className = 'provider-image-section';
+    
+    const providerImg = document.createElement('img');
+    providerImg.src = 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/providers.webp';
+    providerImg.alt = 'Game Providers';
+    providerImg.className = 'provider-image-item';
+    
+    providerContainer.appendChild(providerImg);
+    footerMenuBlock.insertAdjacentElement('afterend', providerContainer);
 }
 
 function addCustomSections() {
@@ -209,6 +233,7 @@ function addCustomSections() {
     addCustomSection1();
     addCustomSection2();
     addBadgesToSeal();
+    addProviderImage();
 }
 
 function handlePageChange() {
