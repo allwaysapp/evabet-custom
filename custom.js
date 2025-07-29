@@ -134,10 +134,17 @@ function addCustomSection2() {
     section1.insertAdjacentElement('afterend', customSection2);
 }
 
-function addBadgesToSeal() {
+function addBadgesToSeal(retryCount = 0) {
+    const maxRetries = 15;
+    
+    if (retryCount >= maxRetries) {
+        return;
+    }
+    
     const anjDiv = document.querySelector('#anj-0258d931-1563-4a3b-a522-851c1c24e41e');
     
     if (!anjDiv) {
+        setTimeout(() => addBadgesToSeal(retryCount + 1), 200);
         return;
     }
     
@@ -197,10 +204,17 @@ function addBadgesToSeal() {
     checkLicenseLoaded();
 }
 
-function addProviderImage() {
+function addProviderImage(retryCount = 0) {
+    const maxRetries = 15;
+    
+    if (retryCount >= maxRetries) {
+        return;
+    }
+    
     const footerMenuBlock = document.querySelector('.footer-menu-block.f-row');
     
     if (!footerMenuBlock) {
+        setTimeout(() => addProviderImage(retryCount + 1), 200);
         return;
     }
     
@@ -220,10 +234,17 @@ function addProviderImage() {
     footerMenuBlock.insertAdjacentElement('afterend', providerContainer);
 }
 
-function addFooterHeader() {
+function addFooterHeader(retryCount = 0) {
+    const maxRetries = 15;
+    
+    if (retryCount >= maxRetries) {
+        return;
+    }
+    
     const footerDiv = document.querySelector('.footer');
     
     if (!footerDiv) {
+        setTimeout(() => addFooterHeader(retryCount + 1), 200);
         return;
     }
     
@@ -243,16 +264,24 @@ function addFooterHeader() {
     footerDiv.insertBefore(footerHeaderContainer, footerDiv.firstChild);
 }
 
-function fixGridLayout() {
+function fixGridLayout(retryCount = 0) {
+    const maxRetries = 15;
+    
+    if (retryCount >= maxRetries) {
+        return;
+    }
+    
     const widgetContainer = document.querySelector('.tb--widget-container');
     
     if (!widgetContainer) {
+        setTimeout(() => fixGridLayout(retryCount + 1), 200);
         return;
     }
     
     const gridDiv = widgetContainer.firstElementChild;
     
     if (!gridDiv) {
+        setTimeout(() => fixGridLayout(retryCount + 1), 200);
         return;
     }
     
