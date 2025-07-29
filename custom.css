@@ -696,6 +696,15 @@ footer .about--company, footer .copyright {
 
 
 @media only screen and (min-width: 1024px) {
+
+   .tb--widgets-footer {
+    height: 100%;
+    max-width: 1440px;
+    margin: auto !important;
+    margin-top: -100px !important;
+
+}
+
     .footer-menu-block:not(:last-child) {
         max-width: 1440px !important;
         margin: auto !important;
@@ -742,10 +751,3 @@ footer .about--company, footer .copyright {
 
 }
 
-.tb--widgets-footer {
-    height: 100%;
-    max-width: 1440px;
-    margin: auto !important;
-    margin-top: -100px !important;
-
-}
