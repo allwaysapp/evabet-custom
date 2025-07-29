@@ -681,3 +681,15 @@ footer .about--company, footer .copyright {
         width: 70px;
     }
 }
+
+/* Provider Image Section */
+.provider-image-section {
+    width: 100%;
+    text-align: center;
+}
+
+.provider-image-item {
+    width: 100%;
+    height: auto;
+    display: block;
+}
