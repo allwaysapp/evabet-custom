@@ -693,3 +693,15 @@ footer .about--company, footer .copyright {
     height: auto;
     display: block;
 }
+
+
+@media only screen and (min-width: 1024px) {
+    .footer-menu-block:not(:last-child) {
+        max-width: 1440px !important;
+        margin: auto !important;
+    }
+.footer-menu-block .footer-menu-block_col:not(:last-child) {
+        max-width: 200px;
+        margin: 0 !important;
+    }
+}
