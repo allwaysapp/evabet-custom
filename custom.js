@@ -12,6 +12,7 @@ function removeCustomSections() {
     const existingSection2 = document.querySelector('.custom-section2');
     const existingBadges = document.querySelectorAll('.evabet-badge-link');
     const existingProvider = document.querySelector('.provider-image-section');
+    const existingFooterHeader = document.querySelector('.footer-header-section');
     
     if (existingSection1) {
         existingSection1.remove();
@@ -23,6 +24,10 @@ function removeCustomSections() {
     
     if (existingProvider) {
         existingProvider.remove();
+    }
+    
+    if (existingFooterHeader) {
+        existingFooterHeader.remove();
     }
     
     existingBadges.forEach(badge => badge.remove());
@@ -215,6 +220,29 @@ function addProviderImage() {
     footerMenuBlock.insertAdjacentElement('afterend', providerContainer);
 }
 
+function addFooterHeader() {
+    const footerDiv = document.querySelector('.footer');
+    
+    if (!footerDiv) {
+        return;
+    }
+    
+    if (document.querySelector('.footer-header-section')) {
+        return;
+    }
+    
+    const footerHeaderContainer = document.createElement('div');
+    footerHeaderContainer.className = 'footer-header-section';
+    
+    const footerHeaderImg = document.createElement('img');
+    footerHeaderImg.src = 'https://github.com/allwaysapp/evabet-custom/blob/main/footer-rewards.png?raw=true';
+    footerHeaderImg.alt = 'Footer Rewards';
+    footerHeaderImg.className = 'footer-header-item';
+    
+    footerHeaderContainer.appendChild(footerHeaderImg);
+    footerDiv.insertBefore(footerHeaderContainer, footerDiv.firstChild);
+}
+
 function addCustomSections() {
     if (isHomePage()) {
         addCustomSection1();
@@ -223,6 +251,7 @@ function addCustomSections() {
     
     addBadgesToSeal();
     addProviderImage();
+    addFooterHeader();
 }
 
 function handlePageChange() {
@@ -250,6 +279,7 @@ function waitAndAddSections() {
     } else {
         addBadgesToSeal();
         addProviderImage();
+        addFooterHeader();
     }
 }
 
