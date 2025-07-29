@@ -30,7 +30,6 @@ function removeCustomSections() {
 
 function addCustomSection1() {
     if (!isHomePage()) {
-        removeCustomSections();
         return;
     }
     
@@ -131,10 +130,6 @@ function addCustomSection2() {
 }
 
 function addBadgesToSeal() {
-    if (!isHomePage()) {
-        return;
-    }
-    
     const anjDiv = document.querySelector('#anj-0258d931-1563-4a3b-a522-851c1c24e41e');
     
     if (!anjDiv) {
@@ -198,10 +193,6 @@ function addBadgesToSeal() {
 }
 
 function addProviderImage() {
-    if (!isHomePage()) {
-        return;
-    }
-    
     const footerMenuBlock = document.querySelector('.footer-menu-block.f-row');
     
     if (!footerMenuBlock) {
@@ -225,25 +216,20 @@ function addProviderImage() {
 }
 
 function addCustomSections() {
-    if (!isHomePage()) {
-        removeCustomSections();
-        return;
+    if (isHomePage()) {
+        addCustomSection1();
+        addCustomSection2();
     }
     
-    addCustomSection1();
-    addCustomSection2();
     addBadgesToSeal();
     addProviderImage();
 }
 
 function handlePageChange() {
     removeCustomSections();
-    
-    if (isHomePage()) {
-        setTimeout(() => {
-            waitAndAddSections();
-        }, 100);
-    }
+    setTimeout(() => {
+        waitAndAddSections();
+    }, 100);
 }
 
 document.addEventListener('click', function(e) {
@@ -254,17 +240,16 @@ document.addEventListener('click', function(e) {
 });
 
 function waitAndAddSections() {
-    if (!isHomePage()) {
-        removeCustomSections();
-        return;
-    }
-    
-    const sliderDiv = document.querySelector('.l2--top.top-banner-section');
-    
-    if (sliderDiv) {
-        addCustomSections();
+    if (isHomePage()) {
+        const sliderDiv = document.querySelector('.l2--top.top-banner-section');
+        if (sliderDiv) {
+            addCustomSections();
+        } else {
+            setTimeout(waitAndAddSections, 500);
+        }
     } else {
-        setTimeout(waitAndAddSections, 500);
+        addBadgesToSeal();
+        addProviderImage();
     }
 }
 
