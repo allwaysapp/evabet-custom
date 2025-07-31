@@ -853,3 +853,7 @@ footer .about--company, footer .copyright {
 #sport_div_iframe {
     padding-left: 60px;
 }
+
+.tb--body-panel, .tb--modal-body {
+    background-color: var(--background-color-1) !important;
+}
