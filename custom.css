@@ -857,3 +857,12 @@ footer .about--company, footer .copyright {
 .tb--body-panel, .tb--modal-body {
     background-color: var(--background-color-1) !important;
 }
+
+.popup-banner, .tb--header-item.active, .tb--modal-header, .tb--modal-logo {
+    background-color: var(--background-color-1) !important;
+}
+
+#modal-root .tb--log_reg_form, .popup-to-page .tb--log_reg_form {
+    background-color: var(--background-color-1) !important;
+    overflow: hidden;
+}
