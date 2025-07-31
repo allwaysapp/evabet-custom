@@ -756,3 +756,10 @@ footer .about--company, footer .copyright {
 
 }
 
+.tb--promotion_categories {
+    background: var(--background-color-1);
+    background-image: url(https://github.com/allwaysapp/evabet-custom/blob/main/promo-top.gif?raw=true) !important;
+    margin-top: 24px;
+    overflow-x: auto;
+    height: 150px !important;
+}
