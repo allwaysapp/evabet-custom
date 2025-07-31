@@ -476,3 +476,9 @@ history.replaceState = function() {
     originalReplaceState.apply(this, arguments);
     setTimeout(handlePageChange, 50);
 };
+
+#sport_div_iframe {
+
+padding-left:60px !important;
+
+}
