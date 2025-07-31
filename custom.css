@@ -141,6 +141,10 @@ footer .about--company, footer .copyright {
    RESPONSIVE - DESKTOP (1024px+)
    ================================ */
 @media only screen and (min-width: 1024px) {
+
+    .tb--has-sidebar.show-sidebar_block .main-block .l5--main {
+        padding-left: 0px !important;
+    }
    .logoBlock_img {
         width: 110px !important;
         height: auto !important;
