@@ -10,6 +10,7 @@ function isHomePage() {
 function removeCustomSections() {
     const existingSection1 = document.querySelector('.custom-section1');
     const existingSection2 = document.querySelector('.custom-section2');
+    const existingSection3 = document.querySelector('.custom-section3');
     const existingBadges = document.querySelectorAll('.evabet-badge-link');
     const existingProvider = document.querySelector('.provider-image-section');
     const existingFooterHeader = document.querySelector('.footer-header-section');
@@ -22,6 +23,10 @@ function removeCustomSections() {
         existingSection2.remove();
     }
     
+    if (existingSection3) {
+        existingSection3.remove();
+    }
+    
     if (existingProvider) {
         existingProvider.remove();
     }
@@ -31,6 +36,18 @@ function removeCustomSections() {
     }
     
     existingBadges.forEach(badge => badge.remove());
+}
+
+function spaNavigate(url) {
+    history.pushState(null, null, url);
+    window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+    
+    setTimeout(() => {
+        removeCustomSections();
+        setTimeout(() => {
+            waitAndAddSections();
+        }, 50);
+    }, 100);
 }
 
 function addCustomSection1() {
@@ -64,13 +81,19 @@ function addCustomSection1() {
     
     images.forEach(image => {
         const linkElement = document.createElement('a');
-        linkElement.href = image.link;
+        linkElement.href = 'javascript:void(0)';
         linkElement.className = 'custom-section1-link';
         
-        if (image.link.startsWith('http')) {
-            linkElement.target = '_blank';
-            linkElement.rel = 'noopener noreferrer';
-        }
+        linkElement.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            
+            if (image.link.startsWith('http')) {
+                window.open(image.link, '_blank', 'noopener,noreferrer');
+            } else {
+                spaNavigate(image.link);
+            }
+        });
         
         const imgElement = document.createElement('img');
         imgElement.src = image.url;
@@ -117,10 +140,14 @@ function addCustomSection2() {
     
     socialImages.forEach(image => {
         const linkElement = document.createElement('a');
-        linkElement.href = image.link;
+        linkElement.href = 'javascript:void(0)';
         linkElement.className = 'custom-section2-link';
-        linkElement.target = '_blank';
-        linkElement.rel = 'noopener noreferrer';
+        
+        linkElement.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            window.open(image.link, '_blank', 'noopener,noreferrer');
+        });
         
         const imgElement = document.createElement('img');
         imgElement.src = image.url;
@@ -132,6 +159,103 @@ function addCustomSection2() {
     });
     
     section1.insertAdjacentElement('afterend', customSection2);
+}
+
+function openComm100Chat() {
+    if (!window.Comm100API) {
+        var Comm100API = Comm100API || {};
+        (function(t) {
+            function e(e) {
+                var a = document.createElement("script"),
+                    c = document.getElementsByTagName("script")[0];
+                a.type = "text/javascript";
+                a.async = !0;
+                a.src = e + t.site_id;
+                c.parentNode.insertBefore(a, c);
+            }
+            t.chat_buttons = t.chat_buttons || [];
+            t.chat_buttons.push({
+                code_plan: "bb5232ba-db0e-4331-b300-1238a842937f",
+                div_id: "comm100-button-bb5232ba-db0e-4331-b300-1238a842937f"
+            });
+            t.site_id = 90006993;
+            t.main_code_plan = "bb5232ba-db0e-4331-b300-1238a842937f";
+            e("https://vue.chatsupport15.com/livechat.ashx?siteId=");
+            setTimeout(function() {
+                t.loaded || e("https://vue.chatsupport15.com/livechat.ashx?siteId=")
+            }, 5e3)
+        })(Comm100API || {});
+        
+        window.Comm100API = Comm100API;
+        
+        if (!document.getElementById('comm100-button-bb5232ba-db0e-4331-b300-1238a842937f')) {
+            const div = document.createElement('div');
+            div.id = 'comm100-button-bb5232ba-db0e-4331-b300-1238a842937f';
+            div.style.display = 'none';
+            document.body.appendChild(div);
+        }
+    }
+    
+    setTimeout(() => {
+        if (window.Comm100API && window.Comm100API.do) {
+            window.Comm100API.do('livechat.button.click');
+        }
+    }, 1000);
+}
+
+function addCustomSection3() {
+    if (!isHomePage()) {
+        return;
+    }
+    
+    const footerContainer = document.querySelector('.footer-container');
+    
+    if (!footerContainer) {
+        return;
+    }
+    
+    if (document.querySelector('.custom-section3')) {
+        return;
+    }
+    
+    const customSection3 = document.createElement('div');
+    customSection3.className = 'custom-section3';
+    
+    const bottomImages = [
+        { name: 'Yatırım Çekim', url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/yatirim-cekim-bottom.webp', link: '/popup/cashier' },
+        { name: 'Yüksek Oran', url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/yuksek-oran-bottom.webp', link: '/sport' },
+        { name: 'Promosyonlar', url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/promosyonlar-bottom.webp', link: '/promotions' },
+        { name: 'Canlı Destek', url: 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/canl%C4%B1-destek-bottom.webp', link: 'comm100-chat' }
+    ];
+    
+    bottomImages.forEach(image => {
+        const linkElement = document.createElement('a');
+        linkElement.href = 'javascript:void(0)';
+        linkElement.className = 'custom-section3-link';
+        
+        linkElement.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            
+            if (image.link === 'comm100-chat') {
+                openComm100Chat();
+            } else if (image.link.startsWith('http')) {
+                window.open(image.link, '_blank', 'noopener,noreferrer');
+            } else {
+                spaNavigate(image.link);
+            }
+        });
+        
+        const imgElement = document.createElement('img');
+        imgElement.src = image.url;
+        imgElement.alt = image.name;
+        imgElement.className = 'custom-section3-item';
+        
+        linkElement.appendChild(imgElement);
+        customSection3.appendChild(linkElement);
+    });
+    
+    footerContainer.insertAdjacentElement('beforebegin', customSection3);
 }
 
 function addBadgesToSeal(retryCount = 0) {
@@ -296,6 +420,7 @@ function addCustomSections() {
     if (isHomePage()) {
         addCustomSection1();
         addCustomSection2();
+        addCustomSection3();
     }
     
     addBadgesToSeal();
