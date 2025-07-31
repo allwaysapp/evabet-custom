@@ -187,11 +187,13 @@ footer .about--company, footer .copyright {
    RESPONSIVE - TABLET (769px+)
    ================================ */
 @media only screen and (min-width: 769px) {
+
+
     .tb--promotions_cont {
         display: grid;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 20px;
-        padding: 20px;
+        padding: 0px !important;
     }
 .menu-block_holder.main--menu-center {
         margin: 0 16px !important;
