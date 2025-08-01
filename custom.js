@@ -12,7 +12,6 @@ function removeCustomSections() {
     const existingSection2 = document.querySelector('.custom-section2');
     const existingSection3 = document.querySelector('.custom-section3');
     const existingBadges = document.querySelectorAll('.evabet-badge-link');
-    const existingProvider = document.querySelector('.provider-image-section');
     const existingFooterHeader = document.querySelector('.footer-header-section');
     
     if (existingSection1) {
@@ -25,10 +24,6 @@ function removeCustomSections() {
     
     if (existingSection3) {
         existingSection3.remove();
-    }
-    
-    if (existingProvider) {
-        existingProvider.remove();
     }
     
     if (existingFooterHeader) {
@@ -328,36 +323,6 @@ function addBadgesToSeal(retryCount = 0) {
     checkLicenseLoaded();
 }
 
-function addProviderImage(retryCount = 0) {
-    const maxRetries = 15;
-    
-    if (retryCount >= maxRetries) {
-        return;
-    }
-    
-    const footerMenuBlock = document.querySelector('.footer-menu-block.f-row');
-    
-    if (!footerMenuBlock) {
-        setTimeout(() => addProviderImage(retryCount + 1), 200);
-        return;
-    }
-    
-    if (document.querySelector('.provider-image-section')) {
-        return;
-    }
-    
-    const providerContainer = document.createElement('div');
-    providerContainer.className = 'provider-image-section';
-    
-    const providerImg = document.createElement('img');
-    providerImg.src = 'https://raw.githubusercontent.com/allwaysapp/evabet-custom/refs/heads/main/providers.webp';
-    providerImg.alt = 'Game Providers';
-    providerImg.className = 'provider-image-item';
-    
-    providerContainer.appendChild(providerImg);
-    footerMenuBlock.insertAdjacentElement('afterend', providerContainer);
-}
-
 function addFooterHeader(retryCount = 0) {
     const maxRetries = 15;
     
@@ -424,7 +389,6 @@ function addCustomSections() {
     }
     
     addBadgesToSeal();
-    addProviderImage();
     addFooterHeader();
     fixGridLayout();
 }
@@ -453,7 +417,6 @@ function waitAndAddSections() {
         }
     } else {
         addBadgesToSeal();
-        addProviderImage();
         addFooterHeader();
         fixGridLayout();
     }
@@ -473,6 +436,6 @@ history.pushState = function() {
 const originalReplaceState = history.replaceState;
 history.replaceState = function() {
     removeCustomSections();
-    originalReplaceState.apply(this, arguments);
+    originalPushState.apply(this, arguments);
     setTimeout(handlePageChange, 50);
 };
