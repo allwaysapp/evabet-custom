@@ -867,11 +867,7 @@ footer .about--company, footer .copyright {
     overflow: hidden;
 }
 
-.footer--separator .tb--separator {
-    display: flex
-;
-    height: 1px;
-    margin-bottom: 24px;
-    width: 100%;
-    display: none !important;
+.logos-block .logos-block_item img {
+    max-height: 1000px !important;
+    object-fit: contain;
 }
