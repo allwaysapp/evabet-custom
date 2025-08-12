@@ -875,3 +875,11 @@ footer .about--company, footer .copyright {
     max-height: 1000px !important;
     object-fit: contain;
 }
+
+.slider_casino {
+    margin: 0 auto;
+    position: relative !important;
+    width: 100%;
+    z-index: 0;
+    max-width: 1920px !important;
+}
