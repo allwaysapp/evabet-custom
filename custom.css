@@ -883,3 +883,7 @@ footer .about--company, footer .copyright {
     z-index: 0;
     max-width: 1920px !important;
 }
+
+.livecasino-slider-container.main--slider-right+.livecasino--top-space {
+    margin-top: 482px !important;
+}
