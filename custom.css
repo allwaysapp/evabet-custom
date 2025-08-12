@@ -878,10 +878,11 @@ footer .about--company, footer .copyright {
 
 .slider_casino {
     margin: 0 auto;
-    position: relative !important;
+    position: relative;
     width: 100%;
     z-index: 0;
     max-width: 1920px !important;
+    padding: 0 20px !important;
 }
 
 .livecasino-slider-container.main--slider-right+.livecasino--top-space {
